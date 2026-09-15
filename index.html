@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Balo Lee Books | Your Favorite Bookstore</title>
+</head>
+
+<body>
+
+ <nav class="navbar">
+  <div class="nav-left">
+   <button class="menu-toggle" aria-label="Open navigation menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    
+    <a href="index.html" class="logo">
+        <img src="./img/book.png" alt="Balo Lee Books Logo">
+        <span>Balo Lee Books</span>
+    </a>
+  </div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a> 
+        <a href="#books">Books</a>
+        <a href="#categories">Categories</a>
+        <a href="#review">Reviews</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+    <div class="nav-right">
+        <button class="search-toggle" aria-label="Open search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </div>
+</nav>
+<div class="search-bar">
+    <div class="search-bar-inner">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="search-input" placeholder="Search books by title or author...">
+        <button class="search-close" aria-label="Close search">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <div class="search-results"></div>
+</div>
+
+<div class="drawer-overlay"></div>
+<div class="side-drawer">
+    <div class="drawer-header">
+        <span>Balo Lee Books</span>
+        <button class="drawer-close" aria-label="Close navigation menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <div class="drawer-links">
+        <a href="#home">Home</a> 
+        <a href="#books">Books</a>
+        <a href="#categories">Categories</a>
+        <a href="#review">Reviews</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="tagline">📖 Where Every Page Inspires</p>
+      <h1>Discover Your <span>Next Favourite Book</span></h1>
+      <p class="hero-text">Explore a world of knowledge, adventure, and imagination. From timeless classics to modern best sellers, Balo Lee Books has something for every reader.</p>
+      <div class="hero-btns">
+        <a href="#books" class="btn btn-pri">Explore Books</a>
+        <a href="#categories" class="btn btn-sec">Browse Categories</a>
+      </div>
+    </div>
+   <!-- <div class="hero-image">
+      <img src="./img/hero-book.png" alt="Collections of books">
+    </div> -->
+  </section>
+  
+  <!-- FEATURED BOOKS -->
+  <section class="featured-books" id="books">
+    <div class="section-title">
+      <p>Our Collection</p>
+      <h2>Featured Books</h2>
+    </div>
+    <div class="books-container">
+        <!-- Book 1 -->
+      <div class="book-card" data-title="Harry Potter and the Deathly Hallows" data-author="J.K. Rowling">
+          <img src="./img/book1.png" alt="Harry Potter and the deathly hallows">
+          <span class="badge">Fantasy</span>
+          <h3>Harry Potter and the Deathly Hallows</h3>
+          <p class="author">J.K. Rowling</p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="price">#9,500</p>
+          <p class="description">The epic final chapter of Harry Potter's journey as he faces his greatest battle against Voldemort.</p>
+          <a href="#" class="book-btn">View Details</a>
+      </div>
+  
+    <!-- Book 2 -->
+      <div class="book-card" data-title="Rich Dad Poor Dad" data-author="Robert Kiyosaki">
+          <img src="./img/book2.png" alt="Rich Dad Poor Dad">
+          <span class="badge">Finance</span>
+          <h3>Rich Dad Poor Dad</h3>
+          <p class="author">Robert Kiyosaki</p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="price">#7,200</p>
+          <p class="description">Build financial knowledge and create long-term wealth.</p>
+          <a href="#" class="book-btn">View Details</a>
+      </div>
+    
+    <!-- Book 3 -->
+      <div class="book-card" data-title="Diary of a Wimpy Kid" data-author="Jeff Kinney">
+          <img src="./img/book3.png" alt="Diary of a wimpy kid">
+          <span class="badge">Comedy</span>
+          <h3>Diary of a Wimpy Kid</h3>
+          <p class="author">Jeff Kinney</p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="price">#6,800</p>
+          <p class="description">Greg Haffley's funny adventures through middle school will keep readers laughing from start to finish.</p>
+          <a href="#" class="book-btn">View Details</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CATEGORIES -->
+  <section class="categories" id="categories">
+    <div class="section-title">
+      <p>Browse by Genre</p>
+      <h2>Book Categories</h2>
+    </div>
+    
+    <div class="categories-container">
+      <div class="category-card fantasy">
+        <i class="fa-solid fa-dragon"></i>
+        <h3>Fantasy</h3>
+        <span class="book-count">📚 128 Books</span>
+        <p>Magical adventures and unforgettable worlds.</p>
+      </div>
+     
+      <div class="category-card finance">
+        <i class="fa-solid fa-sack-dollar"></i>
+        <h3>Finance</h3>
+        <span class="book-count">📚 74 Books</span>
+        <p>Improve your money skills and financial mindset.</p>
+      </div>
+      
+      <div class="category-card fiction">
+        <i class="fa-solid fa-book-open-reader"></i>
+        <h3>Fiction</h3>
+        <span class="book-count">📚 156 Books</span>
+        <p>Captivating stories filled with imagination and adventure.</p>
+      </div>
+     
+      <div class="category-card comedy">
+        <i class="fa-solid fa-face-laugh-beam"></i>
+        <h3>Comedy</h3>
+        <span class="book-count">📚 82 Books</span>
+        <p>Funny stories that will keep you smiling.</p>
+      </div>
+    
+      <div class="category-card tech">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h3>Technology</h3>
+        <span class="book-count">📚 96 Books</span>
+        <p>Learn programming, AI, cyber security, and modern tech skills.</p>
+      </div>
+     
+      <div class="category-card romance">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Romance</h3>
+        <span class="book-count">📚 93 Books</span>
+        <p>Heartwarming love stories for every reader.</p>
+      </div>
+    
+      <div class="category-card science">
+        <i class="fa-solid fa-microscope"></i>
+        <h3>Science</h3>
+        <span class="book-count">📚 78 Books</span>
+        <p>Explore discoveries and fascinating ideas.</p>
+      </div>
+     
+      <div class="category-card children">
+        <i class="fa-solid fa-child-reaching"></i>
+        <h3>Children </h3>
+        <span class="book-count">📚 102 Books</span>
+        <p>Fun books that inspire young readers.</p>
+      </div>
+      
+      <div class="category-card football">
+        <i class="fa-solid fa-futbol"></i>
+        <h3>Football</h3>
+        <span class="book-count">📚 57 Books</span>
+        <p>Discover legendary matches, tactics, and inspiring player stories.</p>
+      </div>
+     
+    </div>
+  </section>
+  
+     <!-- WHY CHOOSE US-->
+     <section class="why-us">
+       <div class="section-title">
+         <p>Why Readers Love Us</p>
+         <h2>Why Choose Balo Lee Books</h2>
+       </div>
+       <div class="why-container">
+         <div class="why-card">
+           <i class="fa-solid fa-truck-fast"></i>
+           <h3>Fast Delivery</h3>
+           <p>Get your favorite books delivered quickly and safely to your doorstep.</p>
+         </div>
+         <div class="why-card">
+           <i class="fa-solid fa-book-open"></i>
+           <h3>Wide Collection</h3>
+           <p>Browse hundreds of books across different genres and interests.</p>
+         </div>
+         <div class="why-card">
+           <i class="fa-solid fa-tags"></i>
+           <h3>Affordable Prices</h3>
+           <p>Enjoy competitive prices and exciting discounts throughout the year.</p>
+         </div>
+         <div class="why-card">
+           <i class="fa-solid fa-headset"></i>
+           <h3>Friendly Support</h3>
+           <p>Our team is always ready to help you choose the perfect book.</p>
+         </div>
+       </div>
+     </section>
+       
+       <!-- STATS -->
+  <section class="stats">
+
+    <div class="stats-heading">
+        <p>Our Impact</p>
+        <h2>Trusted by Thousands of Readers</h2>
+    </div>
+
+    <div class="stats-container">
+
+        <div class="stat-box">
+            <i class="fa-solid fa-book"></i>
+            <h3><span class="counter" data-target="15000" data-suffix="+">0</span></h3>
+            <p>Books Available</p>
+        </div>
+
+        <div class="stat-box">
+            <i class="fa-solid fa-users"></i>
+            <h3><span class="counter" data-target="8500" data-suffix="+">0</span></h3>
+            <p>Happy Readers</p>
+        </div>
+
+        <div class="stat-box">
+            <i class="fa-solid fa-star"></i>
+            <h3><span class="counter" data-target="4.8" data-decimal="true">0</span></h3>
+            <p>Customer Rating</p>
+        </div>
+
+        <div class="stat-box">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3><span class="counter" data-target="24" data-suffix=" hrs">0</span></h3>
+            <p>Fast Delivery</p>
+        </div>
+    </div>
+</section>
+    
+    <!-- BEST SELLERS-->
+    <section class="best-sellers">
+      <div class="best-content">
+        <p class="best-tag">📙 Best Sellers</p>
+        <h2>Find Your Next Great Read</h2>
+        <p>Discover books loved by thousands of readers. From timeless classics to modern masterpieces, explore our most popular collection today.</p>
+        <a href="#books" class="btn btn-pri">Explore Best Sellers</a>
+      </div>
+    </section>
+    
+    <!-- CUSTOMERS REVIEW-->
+    <section class="reviews" id="review">
+        <div class="section-title">
+            <p>Testimonials</p>
+            <h2>What Our Customers Say</h2>
+        </div>
+        <div class="reviews-container">
+            <div class="review-card">
+                <img src="./img/customer1.jpg" alt="Bashir Balogun">
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <p class="review-text">"Balo Lee Books has an amazing collection. My order arrived quickly and the books were in perfect condition."</p>
+                <h3>Bashir Balogun</h3>
+                <span>Abuja, Nigeria</span>
+            </div>
+            
+            <div class="review-card">
+                <img src="./img/customer2.jpg" alt="Afisat Ayorinde">
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <p class="review-text">"The website is easy to use and the customer service was excellent. I'll definitely order again!"</p>
+                <h3>Afisat Ayorinde</h3>
+                <span>Perlis, Malaysia</span>
+            </div>
+            
+            <div class="review-card">
+                <img src="./img/customer3.jpg" alt="David James">
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <p class="review-text">"I found books I couldn't get elsewhere. Highly recommend for every book lover."</p>
+                <h3>David James</h3>
+                <span>New York City, USA</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="news-content">
+            <p class="news-tag">Stay Connected</p>
+            <h2>Get the Latest Book & Exclusive Offers</h2>
+            <p>Subscribe today and be the first to know about new arrivals, special discounts, and updates on exciting literary events</p>
+            <form class="news-form" novalidate>
+                <p class="news-message"></p>
+                <input type="email" id="newsletter-email" name="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <p>Get In Touch</p>
+            <h2>We'd Love to Hear From You</h2>
+        </div>
+        
+        <div class="contact-container">
+            
+            <div class="contact-info">
+                <!-- visit -->
+                <div class="contact-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h3>Visit Us</h3>
+                        <p>25 Library Avenue, Minna, Niger State, Nigeria.</p>
+                    </div>
+                </div>
+                <!-- Call -->
+                <div class="contact-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h3>Call Us</h3>
+                        <p>
+                            <a href="tel:09020846535">+234 902 084 6535</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Email -->
+                <div class="contact-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h3>Email Us</h3>
+                        <p>
+                            <a href="mailto: muhibbullahbalo213@gmail.com">contact@baloleebooks.com</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- opening hours-->
+                <div class="contact-card">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h3>Opening Hours</h3>
+                        <p>Mon - Sat: 9:00 AM - 7:00PM</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- contact form -->
+            <form class="contact-form" novalidate>
+                <p class="form-message"></p>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea rows="6" id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Column 1 -->
+        <div class="footer-box">
+
+    <div class="footer-logo">
+        <img src="./img/book.png" alt="Balo Lee Books Logo">
+
+        <div>
+            <h2>Balo Lee Books</h2>
+            <span>Where Every Page Inspires</span>
+        </div>
+    </div>
+
+    <p>
+        Discover stories that inspire, educate, and entertain. Your trusted destination for books you love.
+    </p>
+
+</div>
+        
+        <!-- Column 2 -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#books">Featured Books</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#review">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="footer-box">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="copyright">
+        <p>&copy; 2026 Balo Lee Books. All Rights Reserved</p>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-lab="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
